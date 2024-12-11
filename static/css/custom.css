@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #9ca3e2; 
+  color: #332562; 
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333333; 
+  font-weight: bold;
+  background-color: transparent;
+}
+
+a, .nav-link {
+  color: #7C9FEC; 
+  text-decoration: none;
+}
+
+a:hover, .nav-link:hover {
+  color: #5678B2; 
+}
+
+button, .btn {
+  background-color: #A7A7C8; 
+  color: #FFFFFF; 
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background-color: #8E8FBF; 
+}
+
+.container, .dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stress-analytics-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stress-analytics-item {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stress-analytics-item p {
+  margin-top: 10px;
+  color: #333333; 
+}
+
+.stress-analytics-item select {
+  background-color: #F7F7F7; 
+  color: #333333; 
+  border: 1px solid #D1D1D1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+
+@media (min-width: 768px) {
+  .stress-analytics-container {
+    flex-direction: row; 
+  }
+
+  .stress-analytics-item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+footer {
+  background-color: #F7F7F7; 
+  color: #6C757D; 
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #7C9FEC; 
+}
