@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Analytics Dashboard - NeuroComm{% endblock %}
+
+{% block content %}
+<header class="text-center my-4">
+    <h1>Analytics Dashboard</h1>
+    <p>Track trends in stress over time</p>
+</header>
+<div class="row text-center">
+    <div class="col-12 col-md-6 mb-3">
+        <h4>Stress Levels</h4>
+        <img src="{{ url_for('static', filename='images/anxiety_chart.png') }}" alt="stress Levels Chart" class="img-fluid">
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <h4>Heart Rate</h4>
+        <img src="{{ url_for('static', filename='images/heart_rate_chart.png') }}" alt="Heart Rate Chart" class="img-fluid">
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <h3 class="text-center">Stress Analytics</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center mb-3">
+                <div class="stress-analytics-item">
+                    <label for="highestStressPeriod" class="form-label">Highest Stress Level in:</label>
+                    <select id="highestStressPeriod" class="form-select">
+                        <option value="day" selected>Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="3months">3 Months</option>
+                        <option value="6months">6 Months</option>
+                    </select>
+                    <p id="highestStressValue" class="mt-2">76</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <div class="stress-analytics-item">
+                    <label for="lowestStressPeriod" class="form-label">Lowest Stress level in:</label>
+                    <select id="lowestStressPeriod" class="form-select">
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="3months" selected>3 Months</option>
+                        <option value="6months">6 Months</option>
+                    </select>
+                    <p id="lowestStressValue" class="mt-2">12</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <div class="stress-analytics-item">
+                    <label for="mostStressfulPeriod" class="form-label">Most Stressful time was:</label>
+                    <select id="mostStressfulPeriod" class="form-select">
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month" selected>Month</option>
+                        <option value="3months">3 Months</option>
+                        <option value="6months">6 Months</option>
+                    </select>
+                    <p id="mostStressfulPeriodValue" class="mt-2">December 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

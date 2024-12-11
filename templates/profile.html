@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile - NeuroComm{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar py-3">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('settings') }}">
+                            Profile Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            Manage Contact List
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <header class="text-center my-4">
+                <h1>Manage Your Contact List</h1>
+            </header>
+
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <h4>Add Contacts Manually</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" id="contactName" name="contactName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactRelationship" class="form-label">Relationship</label>
+                            <select id="contactRelationship" name="contactRelationship" class="form-select" required>
+                                <option value="">Select Relationship</option>
+                                <option value="family">Family</option>
+                                <option value="friend">Friend</option>
+                                <option value="colleague">Colleague</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" id="priorityContact" name="priorityContact" class="form-check-input">
+                            <label for="priorityContact" class="form-check-label">Priority Contact</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Add Contact</button>
+                    </form>
+                </div>
+                
+
+                <div class="col-12 col-md-6">
+                    <h4>Import Contacts</h4>
+                    <button class="btn btn-secondary mb-3">Import from Email</button>
+                    <button class="btn btn-secondary mb-3">Import from Social Media</button>
+                    <p class="text-muted">Coming soon: Support for Google, Facebook, and LinkedIn integrations.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{% endblock %}
